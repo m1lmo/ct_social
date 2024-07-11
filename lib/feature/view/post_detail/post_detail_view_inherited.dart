@@ -68,6 +68,7 @@ class PostDetailViewProviderState extends State<PostDetailViewProvider> {
   /// This method is used to add a comment to the post
   VoidCallback addCommentProvider() {
     return () {
+      if (commentController.text.isEmpty) return;
       context.read<PostCubit>().addComment(
             post,
             CommentModel(
@@ -76,6 +77,7 @@ class PostDetailViewProviderState extends State<PostDetailViewProvider> {
               user: currentUser,
             ),
           );
+      commentController.clear();
     };
   }
 
