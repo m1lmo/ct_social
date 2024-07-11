@@ -82,6 +82,7 @@ class NewPostView extends StatelessWidget {
                 child: Column(
                   children: [
                     TextField(
+                      textInputAction: TextInputAction.next,
                       controller: currentState.postHeader,
                       decoration: const InputDecoration(
                         hintText: 'Title',
@@ -89,6 +90,7 @@ class NewPostView extends StatelessWidget {
                       ),
                     ),
                     TextField(
+                      textInputAction: TextInputAction.done,
                       controller: currentState.postBody,
                       decoration: const InputDecoration(hintText: "What's on your mind?", border: InputBorder.none),
                       minLines: 2,
