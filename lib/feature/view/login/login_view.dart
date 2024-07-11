@@ -53,7 +53,9 @@ class LoginView extends StatelessWidget with NavigatorManager {
                     ],
                     keyboardType: TextInputType.emailAddress,
                     textInputAction: TextInputAction.next,
-                    decoration: const InputDecoration(labelText: 'Email'),
+                    decoration: const InputDecoration(
+                      labelText: 'Username or Email',
+                    ),
                   ),
                   SizedBox(height: 2.h),
                   TextFormField(
